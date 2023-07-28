@@ -1,6 +1,7 @@
 import github from './../images/github.svg';
 import portfolio from './../images/portfolio.png';
 import weatherApp from './../images/weatherApp.png';
+import blog from './../images/blog.png';
 const Projects = () => {
   return (
     <div className='projects min-h-screen'>
@@ -10,12 +11,8 @@ const Projects = () => {
       <div className='project-cards space-y-5 mt-6 px-2 flex flex-col items-center'>
         <div className='max-w-2xl mx-auto'>
           <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-lg dark:bg-gray-800 dark:border-gray-700'>
-            <a href='#'>
-              <img
-                className='rounded-t-lg'
-                src='https://flowbite.com/docs/images/blog/image-1.jpg'
-                alt='img'
-              />
+            <a href='https://github.com/ayanfeOlugbeja/i-blog'>
+              <img className='rounded-t-lg' src={blog} alt='img' />
             </a>
             <div className='p-5'>
               <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
@@ -25,7 +22,7 @@ const Projects = () => {
               <p className='font-normal text-gray-700 mb-3 dark:text-gray-400 space-x-3'>
                 React.js Json Server
               </p>
-              <a href='#'>
+              <a href='https://github.com/ayanfeOlugbeja/i-blog'>
                 <img
                   class='-mr-1 ml-2 h-6 w-6'
                   fill='currentColor'
@@ -55,7 +52,7 @@ const Projects = () => {
               <p className='font-normal text-gray-700 mb-3 dark:text-gray-400'>
                 javaScript Accuweather API Bootstrap localStorage
               </p>
-              <a href='#'>
+              <a href='https://github.com/ayanfeOlugbeja/weather-app'>
                 <img
                   className='-mr-1 ml-2 h-6 w-6'
                   fill='currentColor'
@@ -80,7 +77,7 @@ const Projects = () => {
               <p className='font-normal text-gray-700 mb-3 dark:text-gray-400'>
                 React.js Tailwind CSS
               </p>
-              <a href='#'>
+              <a href='https://github.com/ayanfeOlugbeja/portfolio'>
                 <img
                   className='-mr-1 ml-2 h-6 w-6'
                   fill='currentColor'
