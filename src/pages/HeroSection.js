@@ -1,35 +1,8 @@
-// import Banner from './../components/Banner';
-// import Footer from './../components/Footer';
-
-// import astro from './../images/astro.png';
-// import log from './../images/log.png';
-// import React, { useState, useEffect } from 'react';
-
-// const HeroSection = () => {
-//   const [showMore, setShowMore] = useState(false);
-//   const handleToogle = () => {
-//     setShowMore(!showMore);
-//   };
-//   const [index, setIndex] = useState(0);
-
-//   const skills = [
-//     'design beautiful websites',
-//     'build responsive layout',
-//     'optimize website performance',
-//     'create interactive UI',
-//     'implement smooth animations',
-//   ];
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setIndex((prevIndex) => (prevIndex + 1) % skills.length);
-//     }, 3000);
-//     return () => clearInterval(interval);
-//   }, [skills.length]);
 import Banner from './../components/Banner';
 import Footer from './../components/Footer';
 
 import astro from './../images/astro.png';
-import log from './../images/log.png';
+import log from './../images/logo.png';
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 
