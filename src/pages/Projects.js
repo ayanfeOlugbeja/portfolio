@@ -19,8 +19,8 @@ const Projects = () => {
                 Mini Blog
               </h5>
 
-              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 space-x-3'>
-                ▶React.js ▶Json Server
+              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 space-x-3 tracking-widest'>
+                React.js | Json Server
               </p>
               <a href='https://github.com/ayanfeOlugbeja/i-blog'>
                 <img
@@ -49,8 +49,8 @@ const Projects = () => {
                 Weather App
               </h5>
 
-              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400'>
-                ▶javaScript ▶AccuweatherAPI ▶Bootstrap ▶localStorage
+              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 tracking-widest'>
+                javaScript | AccuweatherAPI | Bootstrap | localStorage
               </p>
               <a href='https://github.com/ayanfeOlugbeja/weather-app'>
                 <img
@@ -74,8 +74,8 @@ const Projects = () => {
                 Portfolio
               </h5>
 
-              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400'>
-                ▶React.js ▶Tailwind CSS
+              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 tracking-widest'>
+                React.js | Tailwind CSS
               </p>
               <a href='https://github.com/ayanfeOlugbeja/portfolio'>
                 <img

@@ -77,10 +77,11 @@ const Navbar = () => {
             </Link>
           </div>
         )}
-
-        <div className='block sm:hidden ml-auto'>
-          <Link className='text-gray-700 text-lg'>Resume</Link>
-        </div>
+        <a
+          href='https://docs.google.com/document/d/1GjQEfE7ynZ82Pjl9miXdwVkr9kFj3_v8Hhoih1d46z0/edit?usp=sharing'
+          className='ml-auto block sm:hidden'>
+          Resume
+        </a>
         {!isHomePage && isMobileNavOpen && (
           <>
             <div className='relative top-0 left-0 right-0 bottom-0 bg-black  z-50 sm:hidden shadow-md'></div>

@@ -1,17 +1,43 @@
+// import Banner from './../components/Banner';
+// import Footer from './../components/Footer';
+
+// import astro from './../images/astro.png';
+// import log from './../images/log.png';
+// import React, { useState, useEffect } from 'react';
+
+// const HeroSection = () => {
+//   const [showMore, setShowMore] = useState(false);
+//   const handleToogle = () => {
+//     setShowMore(!showMore);
+//   };
+//   const [index, setIndex] = useState(0);
+
+//   const skills = [
+//     'design beautiful websites',
+//     'build responsive layout',
+//     'optimize website performance',
+//     'create interactive UI',
+//     'implement smooth animations',
+//   ];
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setIndex((prevIndex) => (prevIndex + 1) % skills.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, [skills.length]);
 import Banner from './../components/Banner';
 import Footer from './../components/Footer';
 
 import astro from './../images/astro.png';
 import log from './../images/log.png';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Typewriter from 'typewriter-effect';
 
 const HeroSection = () => {
   const [showMore, setShowMore] = useState(false);
   const handleToogle = () => {
     setShowMore(!showMore);
   };
-  const [index, setIndex] = useState(0);
-
   const skills = [
     'design beautiful websites',
     'build responsive layout',
@@ -19,12 +45,6 @@ const HeroSection = () => {
     'create interactive UI',
     'implement smooth animations',
   ];
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % skills.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [skills.length]);
   return (
     <div className='hero-section  sm:relative lg:mt-8 mt-10'>
       <div className='logo w-1/5 h-1/4 sm:w-24 my-4 mx-4 top-4  sm:relative sm:top-24 sm:left-16'>
@@ -32,12 +52,26 @@ const HeroSection = () => {
       </div>
 
       <div className='sm:w-1/2 flex items-start flex-col sm:left-16 sm:top-24 sm:relative mx-4'>
-        <div className='h-16 sm:h-12 w-auto'>
-          <span className='sm:text-lg font-bold text-lg text-red-500 md:text-lg lg:text-2xl'>
+        <div className='h-16 sm:h-12 w-auto '>
+          <span className='sm:text-lg font-bold text-xl text-red-500 md:text-lg lg:text-2xl'>
             I can{' '}
           </span>
-          <span className='animate-list text-gray-500 font-bold text-lg sm:text-lg md:text-lg lg:text-2xl'>
-            {skills[index]}
+
+          <span className='text-gray-500 font-bold text-lg sm:text-lg md:text-lg lg:text-2xl inline-block'>
+            <Typewriter
+              options={{
+                strings: [
+                  'design beautiful websites',
+                  'build responsive layout',
+                  'optimize website performance',
+                  'create interactive UI',
+                  'implement smooth animations',
+                ],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+              }}
+            />
           </span>
         </div>
 
@@ -111,11 +145,15 @@ const HeroSection = () => {
           </span>
         </p>
 
-        <button
-          className='lg:px-4 lg:py-3 px-3 py-2 bg-transparent  rounded-lg my-4 mx-auto hidden sm:block'
-          style={{ color: '#3b82f6', border: '1px solid #3b82f6' }}>
-          RESUME
-        </button>
+        <a
+          href='https://docs.google.com/document/d/1GjQEfE7ynZ82Pjl9miXdwVkr9kFj3_v8Hhoih1d46z0/edit?usp=sharing'
+          className=' my-4 mx-auto hidden sm:block'>
+          <button
+            style={{ color: '#3b82f6', border: '1px solid #3b82f6' }}
+            className='lg:px-4 lg:py-3 px-3 py-2  rounded-lg bg-transparent '>
+            RESUME
+          </button>
+        </a>
       </div>
 
       <div className='absolute w-1/4  right-16 top-0 hidden sm:block'>
