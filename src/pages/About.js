@@ -9,9 +9,9 @@ import tailwind from './../images/tailwind.svg';
 
 const About = () => {
   return (
-    <div className=' mt-1 mx-2 mb-4'>
+    <div className=' mt-4 mx-2 mb-4'>
       <section>
-        <h2 className='text-center text-gray-700 font-semibold text-2xl'>
+        <h2 className='text-center text-gray-700 font-semibold text-3xl'>
           About
         </h2>
         <div className='flex justify-center'>
@@ -33,13 +33,13 @@ const About = () => {
             Hey! I post on{' '}
             <a
               href='https://twitter.com/joshuaAAbraham?s=20'
-              className='text-blue-500'>
+              className='text-blue-500 hover:text-red-500'>
               Twitter
             </a>{' '}
             and{' '}
             <a
               href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
-              className='text-blue-500'>
+              className='text-blue-500 hover:text-red-500'>
               LinkedIn
             </a>{' '}
             often. Check out my amazing contents. If you want to get in touch,
@@ -56,27 +56,26 @@ const About = () => {
             I write on{' '}
             <a
               href='https://hashnode.com/@AiyedogbonAbraham'
-              className='text-blue-500'>
+              className='text-blue-500 hover:text-red-500'>
               hashnode
             </a>
             , you can follow and read my{' '}
             <a
-              href='https://hashnode.com/@AiyedogbonAbraham'
-              className='text-blue-500'>
+              href='https://aiyedogbonabraham.hashnode.dev/'
+              className='text-blue-500 hover:text-red-500'>
               blogs
             </a>
             , connect with me on{' '}
             <a
               href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
-              className='text-blue-500'>
+              className='text-blue-500 hover:text-red-500'>
               LinkedIn
             </a>
             .
             <p>
               I talk about{' '}
               <span className='text-sm font-italic'>
-                #reactjs #techbiz(tech business) #javaScript #seo(good
-                practices)
+                #reactjs #javaScript #seo(good practices)
               </span>
             </p>
           </p>
@@ -90,15 +89,13 @@ const About = () => {
           </h2>
 
           <p>
-            I'm an{' '}
+            I'm an architect of{' '}
             <span className='font-normal text-blue-500'>
-              architect of user-friendly interfaces
+              user-friendly interfaces
             </span>
             , with a keen eye for detail and a{' '}
-            <span className='font-normal text-blue-500'>
-              commitment to creating interfaces{' '}
-            </span>
-            that are both{' '}
+            <span className='font-normal text-blue-500'>commitment</span> to
+            creating interfaces that are both{' '}
             <span className='font-normal text-blue-500'>
               efficient and effective
             </span>
@@ -109,7 +106,7 @@ const About = () => {
             <span className='font-normal text-blue-500'>tools</span> I have{' '}
             <span className='font-normal text-blue-500'>worked</span> with over
             the years, for my{' '}
-            <span className='font-normal text-blue-500'>personal</span>,
+            <span className='font-normal text-blue-500'>personal</span>,{' '}
             <span className='font-normal text-blue-500'>professional</span> and{' '}
             <span className='font-normal text-blue-500'>open source </span>
             projects:

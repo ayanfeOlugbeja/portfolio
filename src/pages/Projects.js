@@ -4,13 +4,13 @@ import weatherApp from './../images/weatherApp.png';
 import blog from './../images/blog.png';
 const Projects = () => {
   return (
-    <div className='projects min-h-screen'>
+    <div className='projects min-h-screen my-4'>
       <h2 className='mx-auto font-bold text-3xl text-center text-gray-700 my-6 md:mt-4 md:text-3xl'>
         Noteworthy Projects
       </h2>
       <div className='project-cards space-y-5 mt-6 px-2 flex flex-col items-center'>
         <div className='max-w-2xl mx-auto'>
-          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-lg dark:bg-gray-800 dark:border-gray-700'>
+          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
             <a href='https://github.com/ayanfeOlugbeja/i-blog'>
               <img className='rounded-t-lg' src={blog} alt='img' />
             </a>
@@ -19,8 +19,8 @@ const Projects = () => {
                 Mini Blog
               </h5>
 
-              <p className='font-normal text-gray-700 mb-3 dark:text-gray-400 space-x-3'>
-                React.js Json Server
+              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 space-x-3'>
+                ▶React.js ▶Json Server
               </p>
               <a href='https://github.com/ayanfeOlugbeja/i-blog'>
                 <img
@@ -36,10 +36,10 @@ const Projects = () => {
         </div>
 
         <div className='max-w-2xl mx-auto'>
-          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-lg dark:bg-gray-800 dark:border-gray-700'>
-            <a href='#'>
+          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
+            <a href='https://github.com/ayanfeOlugbeja/weather-app'>
               <img
-                className=' w-1/2 h-1/2 mx-auto'
+                className=' rounded-t-lg'
                 src={weatherApp}
                 alt='weather App'
               />
@@ -49,8 +49,8 @@ const Projects = () => {
                 Weather App
               </h5>
 
-              <p className='font-normal text-gray-700 mb-3 dark:text-gray-400'>
-                javaScript Accuweather API Bootstrap localStorage
+              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400'>
+                ▶javaScript ▶AccuweatherAPI ▶Bootstrap ▶localStorage
               </p>
               <a href='https://github.com/ayanfeOlugbeja/weather-app'>
                 <img
@@ -65,8 +65,8 @@ const Projects = () => {
           </div>
         </div>
         <div className='max-w-2xl mx-auto'>
-          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-lg dark:bg-gray-800 dark:border-gray-700'>
-            <a href='#'>
+          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
+            <a href='https://github.com/ayanfeOlugbeja/portfolio'>
               <img className='rounded-t-lg' src={portfolio} alt='portfolio' />
             </a>
             <div className='p-5'>
@@ -74,8 +74,8 @@ const Projects = () => {
                 Portfolio
               </h5>
 
-              <p className='font-normal text-gray-700 mb-3 dark:text-gray-400'>
-                React.js Tailwind CSS
+              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400'>
+                ▶React.js ▶Tailwind CSS
               </p>
               <a href='https://github.com/ayanfeOlugbeja/portfolio'>
                 <img

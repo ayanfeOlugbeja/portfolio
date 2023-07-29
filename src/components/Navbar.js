@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -9,9 +9,32 @@ const Navbar = () => {
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
-  const closeMobileNav = () => {
-    setIsMobileNavOpen(false);
-  };
+
+  const mobileNavRef = useRef();
+  useEffect(() => {
+    const closeMobileNav = (event) => {
+      if (
+        isMobileNavOpen &&
+        !event.target.closest('.hamburger-menu') &&
+        !event.target.closest('.mobile-nav-content')
+      ) {
+        setIsMobileNavOpen(false);
+      }
+    };
+
+    const handleOrientationChange = () => {
+      setIsMobileNavOpen(false);
+    };
+
+    document.addEventListener('mousedown', closeMobileNav);
+    window.addEventListener('orientationchange', handleOrientationChange);
+
+    return () => {
+      document.removeEventListener('mousedown', closeMobileNav);
+      window.removeEventListener('orientationchange', handleOrientationChange);
+    };
+  }, [isMobileNavOpen]);
+
   const navLinks = [
     { path: '/about', name: 'About' },
     { path: '/contact', name: 'Contact' },
@@ -24,7 +47,7 @@ const Navbar = () => {
         style={{ borderBottom: '1px solid #9ca3bf' }}>
         {!isHomePage && (
           <div className='sm:hidden'>
-            <button className='p-2' onClick={toggleMobileNav}>
+            <button className='p-2 hamburger-menu' onClick={toggleMobileNav}>
               <svg
                 className='w-6 h-6'
                 viewBox='0 0 24 24'
@@ -43,29 +66,37 @@ const Navbar = () => {
             </button>
           </div>
         )}
+        {!isHomePage ? (
+          <div className='block sm:hidden text-xl font-semibold ml-3 text-red-500'>
+            <Link to='/'>Aiyedogbon</Link>
+          </div>
+        ) : (
+          <div className='block sm:hidden text-xl font-semibold ml-3'>
+            <Link to='/' style={{ color: '#3b82f6' }}>
+              Aiyedogbon
+            </Link>
+          </div>
+        )}
 
-        <div className='block sm:hidden text-xl font-semibold ml-3'>
-          <Link to='/' style={{ color: '#3b82f6' }}>
-            Aiyedogbon
-          </Link>
-        </div>
         <div className='block sm:hidden ml-auto'>
           <Link className='text-gray-700 text-lg'>Resume</Link>
         </div>
         {!isHomePage && isMobileNavOpen && (
           <>
-            <div
-              className='relative top-0 left-0 right-0 bottom-0 bg-black opacity-40 z-50 sm:hidden'
-              onClick={closeMobileNav}></div>
+            <div className='relative top-0 left-0 right-0 bottom-0 bg-black  z-50 sm:hidden shadow-md'></div>
 
-            <div className='absolute top-24 left-0 right-0 bottom-0 w-1/2 h-screen bg-white z-50 transition-transform  duration-300 ease-in-out transform sm:hidden'>
+            <div
+              className='absolute top-24 left-0 right-0 bottom-0 w-[55%] h-screen bg-white z-50 transition-transform  duration-300 ease-in-out transform sm:hidden  shadow-md mobile-nav-content'
+              ref={mobileNavRef}>
               <ul className='p-4 '>
                 {navLinks.map((link) => (
                   <li key={link.path} className='mb-7'>
                     <Link
                       to={link.path}
                       className='text-gray-700 hover:text-gray-900 text-lg font-semibold'
-                      onClick={closeMobileNav}>
+                      onClick={() => {
+                        setIsMobileNavOpen(false);
+                      }}>
                       {link.name}
                       {location.pathname === link.path && (
                         <span className='absolute right-4'>▪</span>

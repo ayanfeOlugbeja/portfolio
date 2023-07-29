@@ -43,7 +43,7 @@ const Contact = () => {
           <Linked />
         </section>
       </div>
-      <p className='text-sm lg:text-base md:text-base  mb-10  text-center sm:hidden lg:block lg:absolute lg:left-10 lg:right-10 lg:bottom-0 md:block md:absolute md:left-10 md:right-10 md:bottom-0'>
+      <p className='text-sm lg:text-base md:text-base  mb-10  text-center sm:hidden lg:block lg:absolute lg:left-10 lg:right-10 lg:bottom-0 md:block md:absolute md:left-10 md:right-10 md:bottom-0 hover:text-red-500'>
         Designed & Built by <br />
         <a href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'>
           {' '}
