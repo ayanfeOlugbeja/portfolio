@@ -37,7 +37,7 @@ body {
     rgb(253, 252, 252) 50%,
     rgb(255, 255, 255) 100%
   ); */
-  background: yellow;
+  background: #ffffff;
 }
 .social::after {
   content: '';
