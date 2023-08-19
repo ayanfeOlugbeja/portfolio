@@ -33,13 +33,13 @@ const About = () => {
             Hey! I post on{' '}
             <a
               href='https://twitter.com/joshuaAAbraham?s=20'
-              className='text-blue-500 hover:text-red-500'>
+              className='text-red-500'>
               Twitter
             </a>{' '}
             and{' '}
             <a
               href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
-              className='text-blue-500 hover:text-red-500'>
+              className='text-red-500'>
               LinkedIn
             </a>{' '}
             often. Check out my amazing contents. If you want to get in touch,
@@ -56,19 +56,19 @@ const About = () => {
             I write on{' '}
             <a
               href='https://hashnode.com/@AiyedogbonAbraham'
-              className='text-blue-500 hover:text-red-500'>
+              className='text-red-500'>
               hashnode
             </a>
             , you can follow and read my{' '}
             <a
               href='https://aiyedogbonabraham.hashnode.dev/'
-              className='text-blue-500 hover:text-red-500'>
+              className='text-red-500'>
               blogs
             </a>
             , connect with me on{' '}
             <a
               href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
-              className='text-blue-500 hover:text-red-500'>
+              className='text-red-500'>
               LinkedIn
             </a>
             .
@@ -93,13 +93,10 @@ const About = () => {
             <span className='font-normal text-blue-500'>
               user-friendly interfaces
             </span>
-            , with a keen eye for detail and a{' '}
-            <span className='font-normal text-blue-500'>commitment</span> to
-            creating interfaces that are both{' '}
-            <span className='font-normal text-blue-500'>
-              efficient and effective
-            </span>
-            .
+            , with a keen eye for detail and a commitment to{' '}            
+<span className='font-normal text-blue-500'>
+            creating interfaces that are both
+  </span> efficient and effective.
           </p>
           <p className='mt-1'>
             Here are some of the{' '}
