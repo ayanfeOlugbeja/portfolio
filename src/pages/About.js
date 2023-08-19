@@ -95,8 +95,8 @@ const About = () => {
             </span>
             , with a keen eye for detail and a commitment to{' '}            
 <span className='font-normal text-blue-500'>
-            creating interfaces that are both
-  </span> efficient and effective.
+            creating interfaces
+  </span> that are both efficient and effective.
           </p>
           <p className='mt-1'>
             Here are some of the{' '}
