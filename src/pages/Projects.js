@@ -16,7 +16,7 @@ const Projects = () => {
             </a>
             <div className='p-5'>
               <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
-                Mini Blog
+                Blog
               </h5>
 
               <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 space-x-3 tracking-widest'>
