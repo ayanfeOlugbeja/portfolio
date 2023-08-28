@@ -90,7 +90,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-<div className="mx-auto lg:w-[27%] md:w-[27%] w-[35%] mt-8 flex justify-center items-center"><a href="https://github.com/ayanfeOlugbeja" target="_blank">
+<div className="mx-auto lg:w-[27%] md:w-[27%] w-[40%] mt-8 flex justify-center items-center"><a href="https://github.com/ayanfeOlugbeja" target="_blank">
 <button class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">See other Projects</button></a> </div>
 
     </div>
