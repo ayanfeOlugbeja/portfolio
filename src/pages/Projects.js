@@ -90,7 +90,8 @@ const Projects = () => {
           </div>
         </div>
       </div>
-<button class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex justify-center items-center mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"><a href="https://github.com/ayanfeOlugbeja">See other Projects</a></button>
+<div className="mx-auto w-[27%] flex justify-center items-center"><a href="https://github.com/ayanfeOlugbeja" target="_blank">
+<button class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">See other Projects</button></a> </div>
 
     </div>
   );
