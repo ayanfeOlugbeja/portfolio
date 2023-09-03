@@ -104,7 +104,7 @@ const HeroSection = () => {
               </p>
             </div>
           ) : (
-            `When I got into tech three years ago, I set a goal to "appear at the top of the search results" when my name is searched.`
+            `I'm passionate about technology and problem solving. I've always wanted to build products that would make a positive impact on the world. I'm excited to share my work with you, but there's so much more to tell.`
           )}{' '}
           <br />
           <span onClick={handleToogle} className='text-red-500'>
