@@ -14,16 +14,16 @@ const Footer = () => {
           Aiyedogbon
         </h1>
         <div className='links text-gray-700 text-base flex flex-col items-center my-5'>
-          <Link to='/about' className='mb-4' onClick={scrollToTop}>
+          <Link to='/about' className='mb-6 tracking-wider' onClick={scrollToTop}>
             About
           </Link>
-          <a href='https://hashnode.com/@AiyedogbonAbraham' className='mb-4'>
+          <a href='https://hashnode.com/@AiyedogbonAbraham' className='mb-6 tracking-wider'>
             Blog
           </a>
-          <Link to='/contact' className='mb-4' onClick={scrollToTop}>
+          <Link to='/contact' className='mb-6 tracking-wider' onClick={scrollToTop}>
             Contact
           </Link>
-          <Link to='/projects' onClick={scrollToTop}>
+          <Link to='/projects' onClick={scrollToTop} className="tracking-wider">
             Projects
           </Link>
         </div>
