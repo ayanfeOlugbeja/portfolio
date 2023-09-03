@@ -136,7 +136,7 @@ const HeroSection = () => {
         style={{ borderBottom: '0.5px solid #9ca3bf' }}>
         <Banner />
       </div>
-      <div className='footer sm:hidden mt-16'>
+      <div className='footer sm:hidden mt-12'>
         <Footer />
       </div>
     </div>
