@@ -67,12 +67,12 @@ const Navbar = () => {
           </div>
         )}
         {!isHomePage ? (
-          <div className='block sm:hidden text-xl font-semibold ml-3 text-red-500'>
-            <Link to='/'>Aiyedogbon</Link>
+          <div className='block sm:hidden text-xl font-semibold ml-3'>
+            <Link to='/' style={{ color: '#3b82f6' }}>Aiyedogbon</Link>
           </div>
         ) : (
-          <div className='block sm:hidden text-xl font-semibold ml-3'>
-            <Link to='/' style={{ color: '#3b82f6' }}>
+          <div className='block sm:hidden text-xl font-semibold ml-3 text-red-500'>
+            <Link to='/'>
               Aiyedogbon
             </Link>
           </div>
