@@ -8,7 +8,35 @@ const Projects = () => {
       <h2 className='mx-auto font-bold text-3xl text-center text-gray-700 my-6 md:mt-4 md:text-3xl'>
         Noteworthy Projects
       </h2>
+      
       <div className='project-cards space-y-5 mt-6 px-2 flex flex-col items-center'>
+
+            <div className='max-w-2xl mx-auto'>
+          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
+            <a href='https://github.com/ayanfeOlugbeja'>
+              <img className='rounded-t-lg' src='https://scontent.flos5-2.fna.fbcdn.net/v/t39.30808-6/375180336_1495175591254667_9047282910493735318_n.jpg?stp=dst-jpg_p180x540&_nc_cat=100&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeG02njwUz2PWmOKMXhteJaTCiCflXVPvbIKIJ-VdU-9skifx3BSnUAK_3sctd1ZtfnnwZU7XwdYe8etGG2uralD&_nc_ohc=vfXkfQAAJKEAX9cIdnl&_nc_zt=23&_nc_ht=scontent.flos5-2.fna&oh=00_AfAFZ6H1xJ56JzpJFSSdffK9OIMqFo_8zXpPETN85Kuxvw&oe=64FA220B' alt='Pass/Exeat application system' />
+            </a>
+            <div className='p-5'>
+              <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
+               PASSI (Electronic Exeat/Pass System)
+              </h5>
+
+              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 space-x-3 tracking-widest'>
+                React.js | Redux | Tailwind | Node
+              </p>
+              <a href='https://github.com/ayanfeOlugbeja'>
+                <img
+                  class='-mr-1 ml-2 h-6 w-6'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                  src={github}
+                  alt='github'
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className='max-w-2xl mx-auto'>
           <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
             <a href='https://github.com/ayanfeOlugbeja/i-blog'>
