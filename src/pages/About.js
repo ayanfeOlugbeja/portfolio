@@ -90,22 +90,22 @@ const About = () => {
 
           <p>
             I'm an architect of{' '}
-            <span className='font-normal text-blue-500'>
+            <span className='font-bold'>
               user-friendly interfaces
             </span>
             , with a keen eye for detail and a commitment to{' '}            
-<span className='font-normal text-blue-500'>
+<span className='font-bold'>
             creating interfaces
   </span> that are both efficient and effective.
           </p>
           <p className='mt-1'>
             Here are some of the{' '}
-            <span className='font-normal text-blue-500'>tools</span> I have{' '}
-            <span className='font-normal text-blue-500'>worked</span> with over
+            <span className='font-bold'>tools</span> I have{' '}
+            <span className='font-bold'>worked</span> with over
             the years, for my{' '}
-            <span className='font-normal text-blue-500'>personal</span>,{' '}
-            <span className='font-normal text-blue-500'>professional</span> and{' '}
-            <span className='font-normal text-blue-500'>open source </span>
+            <span className='font-bold'>personal</span>,{' '}
+            <span className='font-bold'>professional</span> and{' '}
+            <span className='font-bold'>open source </span>
             projects:
           </p>
           <div className='my-2 flex flex-row flex-wrap  justify-center gap-1 items-center px-2 lg:px-0 lg:w-[80%] w-full mx-auto '>
