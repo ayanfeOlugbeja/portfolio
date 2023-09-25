@@ -91,7 +91,7 @@ const Navbar = () => {
               ref={mobileNavRef}>
               <ul className='p-4 '>
                 {navLinks.map((link) => (
-                  <li key={link.path} className='mb-7 mt-4'>
+                  <li key={link.path} className='mb-10 mt-4'>
                     <Link
                       to={link.path}
                       className='text-gray-700 hover:text-gray-900 text-lg font-semibold tracking-wider'
