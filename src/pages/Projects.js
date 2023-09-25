@@ -14,7 +14,7 @@ const Projects = () => {
             <div className='max-w-2xl mx-auto'>
           <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
             <a href='https://github.com/ayanfeOlugbeja'>
-              <img className='rounded-t-lg' src='https://www.instagram.com/p/CxoNMmfKddh/?igshid=OGY3MTU3OGY1Mw==' alt='Pass/Exeat application system' />
+              <img className='rounded-t-lg' src='https://www.facebook.com/100022867205031/posts/pfbid0KdeCpEhuuLGHfT4yZ7h2xhpNSPSMNDWHs2co3ZRWXbWRNmyn6eLTWWscSvM4pRMMl/?app=fbl' alt='Pass/Exeat application system' />
             </a>
             <div className='p-5'>
               <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
