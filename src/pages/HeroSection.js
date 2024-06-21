@@ -13,7 +13,7 @@ const HeroSection = () => {
   }
 
   return (
-    <div className='hero-section  sm:relative lg:mt-8 mt-10'>
+    <div className='hero-section  sm:relative lg:mt-8 mt-10 text-black'>
       <div className='logo w-1/5 h-1/4 sm:w-24 my-4 mx-4 top-4  sm:relative sm:top-24 sm:left-16'>
         <img src={log} alt='logo' />
       </div>
