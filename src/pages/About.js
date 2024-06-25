@@ -24,9 +24,7 @@ const About = () => {
   return (
     <div className=' mt-4 mx-4 mb-4'>
       <section>
-        <h2 className='text-center text-gray-700 font-semibold text-3xl m-7'>
-          About
-        </h2>
+       
         <div className='flex justify-center'>
           <div
             class='badge-base LI-profile-badge'
