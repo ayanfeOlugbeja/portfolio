@@ -6,9 +6,7 @@ import Passi from './../images/passi.jpg'
 const Projects = () => {
   return (
     <div className='projects min-h-screen my-4'>
-      <h2 className='mx-auto font-bold text-3xl text-center text-gray-700 my-6 md:mt-4 md:text-3xl'>
-        Noteworthy Projects
-      </h2>
+     
 
       <div className='project-cards space-y-5 mt-6 px-2 flex flex-col items-center'>
         <div className='max-w-2xl mx-auto'>

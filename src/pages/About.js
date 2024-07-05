@@ -11,9 +11,13 @@ const About = () => {
   return (
     <div className=' mt-4 mx-4 mb-4'>
       <section>
+<<<<<<< HEAD
         <h2 className='text-center text-gray-700 font-semibold text-3xl'>
           About
         </h2>
+=======
+       
+>>>>>>> 52795af9cc6193ad888e21f178b0e9525ba3ebc7
         <div className='flex justify-center'>
           <img
             src={me}
