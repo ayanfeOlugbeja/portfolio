@@ -1,25 +1,25 @@
-import Banner from './../components/Banner'
-import Footer from './../components/Footer'
+import Banner from './../components/Banner';
+import Footer from './../components/Footer';
 
-import astro from './../images/astro.png'
-import log from './../images/logo.png'
-import React, { useState } from 'react'
-import Typewriter from 'typewriter-effect'
+import astro from './../images/astro.png';
+import log from './../images/logo.png';
+import React, { useState } from 'react';
+import Typewriter from 'typewriter-effect';
 
 const HeroSection = () => {
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useState(false);
   const handleToogle = () => {
-    setShowMore(!showMore)
-  }
+    setShowMore(!showMore);
+  };
 
   return (
-    <div className='hero-section  sm:relative lg:mt-8 mt-10 text-black'>
+    <div className='hero-section  sm:relative lg:mt-8 mt-10'>
       <div className='logo w-1/5 h-1/4 sm:w-24 my-4 mx-4 top-4  sm:relative sm:top-24 sm:left-16'>
         <img src={log} alt='logo' />
       </div>
 
       <div className='sm:w-1/2 flex items-start flex-col sm:left-16 sm:top-24 sm:relative mx-4'>
-        {/* <div className='h-16 sm:h-12 w-auto '>
+        <div className='h-16 sm:h-12 w-auto '>
           <span className='sm:text-lg font-bold text-xl text-red-500 md:text-lg lg:text-2xl'>
             I can{' '}
           </span>
@@ -40,7 +40,7 @@ const HeroSection = () => {
               }}
             />
           </span>
-        </div> */}
+        </div>
 
         <p className='text-gray-700'>
           {showMore ? (
@@ -114,12 +114,10 @@ const HeroSection = () => {
 
         <a
           href='https://docs.google.com/document/d/1GjQEfE7ynZ82Pjl9miXdwVkr9kFj3_v8Hhoih1d46z0/edit?usp=sharing'
-          className=' my-4 mx-auto hidden sm:block'
-        >
+          className=' my-4 mx-auto hidden sm:block'>
           <button
             style={{ color: '#3b82f6', border: '1px solid #3b82f6' }}
-            className='lg:px-4 lg:py-3 px-3 py-2  rounded-lg bg-transparent '
-          >
+            className='lg:px-4 lg:py-3 px-3 py-2  rounded-lg bg-transparent '>
             RESUME
           </button>
         </a>
@@ -135,15 +133,14 @@ const HeroSection = () => {
 
       <div
         className='mt-12 h-32 px-2 text-xl font-semibold text-justify sm:hidden'
-        style={{ borderBottom: '0.5px solid #9ca3bf' }}
-      >
+        style={{ borderBottom: '0.5px solid #9ca3bf' }}>
         <Banner />
       </div>
       <div className='footer sm:hidden mt-12'>
         <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
