@@ -1,5 +1,5 @@
+import { useEffect } from 'react'
 import Linked from './../components/Linked'
-import me from './../images/me.png'
 import react from './../images/react.svg'
 import html from './../images/html.svg'
 import css from './../images/css.svg'
@@ -8,19 +8,32 @@ import firebase from './../images/firebase.svg'
 import tailwind from './../images/tailwind.svg'
 
 const About = () => {
+  useEffect(() => {
+    const script = document.createElement('script')
+
+    script.src = 'https://platform.linkedin.com/badges/js/profile.js'
+    script.async = true
+    script.defer = true
+
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
   return (
     <div className=' mt-4 mx-4 mb-4'>
       <section>
-        <h2 className='text-center text-gray-700 font-semibold text-3xl'>
-          About
-        </h2>
-
         <div className='flex justify-center'>
-          <img
-            src={me}
-            alt='a pic of myself'
-            className='w-2/3 h-90 sm:w-1/3 lg:w-1/4 md:w-1/3'
-          />
+          <div
+            class='badge-base LI-profile-badge'
+            data-locale='en_US'
+            data-size='large'
+            data-theme='light'
+            data-type='HORIZONTAL'
+            data-vanity='abraham-aiyedogbon-9a7095282'
+            data-version='v1'
+          ></div>
         </div>
       </section>
       <div className='sm:w-[55%] sm:mx-auto flex flex-col justify-between mt-8'>
