@@ -54,7 +54,6 @@ const Navbar = () => {
 
   // Navigation Links
   const navLinks = [
-    { path: '/', name: 'Home' },
     { path: '/about', name: 'About' },
     { path: '/contact', name: 'Contact' },
     { path: '/projects', name: 'Projects' },
@@ -120,6 +119,20 @@ const Navbar = () => {
               </div>
 
               <ul className='px-6 pt-4 space-y-8'>
+                <li className='text-lg'>
+                  <Link
+                    to='/'
+                    className='text-white hover:text-gray-300 transition-colors duration-300 font-semibold tracking-wider'
+                    onClick={() => {
+                      setIsMobileNavOpen(false);
+                      document.body.style.overflow = 'auto';
+                    }}>
+                    Home{' '}
+                    {location.pathname === '/' && (
+                      <span className='absolute right-4'>▪</span>
+                    )}
+                  </Link>
+                </li>
                 {navLinks.map((link) => (
                   <li key={link.path} className='text-lg'>
                     <Link
