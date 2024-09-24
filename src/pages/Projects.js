@@ -1,134 +1,202 @@
-import github from './../images/github.svg'
-import portfolio from './../images/portfolio.png'
-import weatherApp from './../images/weatherApp.png'
-import blog from './../images/blog.png'
-import Passi from './../images/passi.jpg'
+import React from 'react';
+import github from './../images/github.svg';
+import portfolio from './../images/portfolio.png';
+import weatherApp from './../images/weatherApp.png';
+import blog from './../images/blog.png';
+import Passi from './../images/passi.jpg';
+import AimPro from './../images/aimprodriv.png';
+
 const Projects = () => {
   return (
-    <div className='projects min-h-screen my-4'>
-     
+    <div className='projects min-h-screen py-12 bg-gray-100 dark:bg-gray-900'>
+      <h2 className='text-4xl font-extrabold text-gray-800 dark:text-white text-center mb-12 tracking-wide'>
+        Featured Projects
+      </h2>
 
-      <div className='project-cards space-y-5 mt-6 px-2 flex flex-col items-center'>
-        <div className='max-w-2xl mx-auto'>
-          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
-            <a href='https://github.com/ayanfeOlugbeja'>
-              <img
-                className='rounded-t-lg'
-                src={Passi}
-                alt='Pass/Exeat application system'
-              />
-            </a>
-            <div className='p-5'>
-              <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
-                PASSI (Electronic Exeat/Pass System)
-              </h5>
-
-              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 space-x-3 tracking-widest'>
-                React.js | Redux | Tailwind | Node
-              </p>
-              <a href='https://github.com/ayanfeOlugbeja'>
-                <img
-                  class='-mr-1 ml-2 h-6 w-6'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  src={github}
-                  alt='github'
-                />
+      <div className='grid gap-12 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-6'>
+        {/* Aim ProDrive Project */}
+        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
+          <div className='relative group'>
+            <img
+              className='rounded-t-lg w-full'
+              src={AimPro}
+              alt='Aim Prodrive Training Centre booking website'
+            />
+            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
+              <a
+                href='https://aim-prodrive.vercel.app'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
+                Visit Website
               </a>
             </div>
           </div>
-        </div>
-
-        <div className='max-w-2xl mx-auto'>
-          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
-            <a href='https://github.com/ayanfeOlugbeja/i-blog'>
-              <img className='rounded-t-lg' src={blog} alt='img' />
+          <div className='p-6'>
+            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
+              Aim ProDrive Training Centre
+            </h5>
+            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
+              React.js | Redux | Tailwind | Node | Firebase
+            </p>
+            <a
+              href='https://github.com/ayanfeOlugbeja/aim-pro'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <img className='h-7 w-7' src={github} alt='GitHub repository' />
             </a>
-            <div className='p-5'>
-              <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
-                Blog
-              </h5>
-
-              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 space-x-3 tracking-widest'>
-                React.js | Json Server
-              </p>
-              <a href='https://github.com/ayanfeOlugbeja/i-blog'>
-                <img
-                  class='-mr-1 ml-2 h-6 w-6'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  src={github}
-                  alt='github'
-                />
-              </a>
-            </div>
           </div>
         </div>
 
-        <div className='max-w-2xl mx-auto'>
-          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
-            <a href='https://github.com/ayanfeOlugbeja/weather-app'>
-              <img
-                className=' rounded-t-lg'
-                src={weatherApp}
-                alt='weather App'
-              />
-            </a>
-            <div className='p-5'>
-              <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
-                Weather App
-              </h5>
-
-              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 tracking-widest'>
-                javaScript | AccuweatherAPI | Bootstrap | localStorage
-              </p>
-              <a href='https://github.com/ayanfeOlugbeja/weather-app'>
-                <img
-                  className='-mr-1 ml-2 h-6 w-6'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  src={github}
-                  alt='github'
-                />
+        {/* PASSI Project */}
+        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
+          <div className='relative group'>
+            <img
+              className='rounded-t-lg w-full'
+              src={Passi}
+              alt='Pass/Exeat application system'
+            />
+            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
+              <a
+                href='https://gvuexeat.vercel.app'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
+                Visit Website
               </a>
             </div>
           </div>
-        </div>
-        <div className='max-w-2xl mx-auto'>
-          <div className='bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700'>
-            <a href='https://github.com/ayanfeOlugbeja/portfolio'>
-              <img className='rounded-t-lg' src={portfolio} alt='portfolio' />
+          <div className='p-6'>
+            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
+              PASSI (Electronic Exeat/Pass System)
+            </h5>
+            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
+              React.js | Redux | Tailwind | Node | Firebase
+            </p>
+            <a
+              href='https://github.com/ayanfeOlugbeja/exeat-app'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <img className='h-7 w-7' src={github} alt='GitHub repository' />
             </a>
-            <div className='p-5'>
-              <h5 className='text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white'>
-                Portfolio
-              </h5>
+          </div>
+        </div>
 
-              <p className='font-normal text-sm text-gray-700 mb-3 dark:text-gray-400 tracking-widest'>
-                React.js | Tailwind CSS
-              </p>
-              <a href='https://github.com/ayanfeOlugbeja/portfolio'>
-                <img
-                  className='-mr-1 ml-2 h-6 w-6'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  src={github}
-                  alt='github'
-                />
+        {/* Blog Project */}
+        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
+          <div className='relative group'>
+            <img
+              className='rounded-t-lg w-full'
+              src={blog}
+              alt='Blog project'
+            />
+            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
+              <a
+                href='https://github.com/ayanfeOlugbeja/i-blog'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
+                Visit Website
               </a>
             </div>
+          </div>
+          <div className='p-6'>
+            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
+              Blog
+            </h5>
+            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
+              React.js | JSON Server
+            </p>
+            <a
+              href='https://github.com/ayanfeOlugbeja/i-blog'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <img className='h-7 w-7' src={github} alt='GitHub repository' />
+            </a>
+          </div>
+        </div>
+
+        {/* Weather App Project */}
+        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
+          <div className='relative group'>
+            <img
+              className='rounded-t-lg w-full'
+              src={weatherApp}
+              alt='Weather App'
+            />
+            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
+              <a
+                href='https://github.com/ayanfeOlugbeja/weather-app'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
+                Visit Website
+              </a>
+            </div>
+          </div>
+          <div className='p-6'>
+            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
+              Weather App
+            </h5>
+            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
+              JavaScript | Accuweather API | Bootstrap | localStorage
+            </p>
+            <a
+              href='https://github.com/ayanfeOlugbeja/weather-app'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <img className='h-7 w-7' src={github} alt='GitHub repository' />
+            </a>
+          </div>
+        </div>
+
+        {/* Portfolio Project */}
+        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
+          <div className='relative group'>
+            <img
+              className='rounded-t-lg w-full'
+              src={portfolio}
+              alt='Portfolio project'
+            />
+            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
+              <a
+                href='https://www.aiyedogbonabraham.pro'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
+                Visit Website
+              </a>
+            </div>
+          </div>
+          <div className='p-6'>
+            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
+              Portfolio
+            </h5>
+            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
+              React.js | Tailwind CSS
+            </p>
+            <a
+              href='https://github.com/ayanfeOlugbeja/portfolio'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <img className='h-7 w-7' src={github} alt='GitHub repository' />
+            </a>
           </div>
         </div>
       </div>
-      <div className='mx-auto lg:w-[27%] md:w-[27%] w-[45%] mt-8 flex justify-center items-center'>
-        <a href='https://github.com/ayanfeOlugbeja' target='_blank'>
-          <button class='text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800'>
+
+      <div className='flex justify-center items-center mt-12'>
+        <a
+          href='https://github.com/ayanfeOlugbeja'
+          target='_blank'
+          rel='noopener noreferrer'>
+          <button className='text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-base px-6 py-3 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800 transition-all duration-300'>
             See other Projects
           </button>
-        </a>{' '}
+        </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

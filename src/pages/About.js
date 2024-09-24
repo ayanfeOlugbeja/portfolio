@@ -1,212 +1,146 @@
-import { useEffect } from 'react'
-import Linked from './../components/Linked'
-import react from './../images/react.svg'
-import html from './../images/html.svg'
-import css from './../images/css.svg'
-import javaScript from './../images/javaScript.svg'
-import firebase from './../images/firebase.svg'
-import tailwind from './../images/tailwind.svg'
+import { useEffect } from 'react';
+import Linked from './../components/Linked';
+import react from './../images/react.svg';
+import html from './../images/html.svg';
+import css from './../images/css.svg';
+import javaScript from './../images/javaScript.svg';
+import firebase from './../images/firebase.svg';
+import tailwind from './../images/tailwind.svg';
 
 const About = () => {
+  // Loading LinkedIn badge script
   useEffect(() => {
-    const script = document.createElement('script')
-
-    script.src = 'https://platform.linkedin.com/badges/js/profile.js'
-    script.async = true
-    script.defer = true
-
-    document.body.appendChild(script)
-
+    const script = document.createElement('script');
+    script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
     return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
-    <div className=' mt-4 mx-4 mb-4'>
-      <section>
-        <div className='flex justify-center'>
-          <div
-            class='badge-base LI-profile-badge'
-            data-locale='en_US'
-            data-size='large'
-            data-theme='light'
-            data-type='HORIZONTAL'
-            data-vanity='abraham-aiyedogbon-9a7095282'
-            data-version='v1'
-          ></div>
-        </div>
+    <div className='mt-6 mb-6 mx-4'>
+      {/* LinkedIn Badge Section */}
+      <section className='flex justify-center mb-8'>
+        <div
+          className='badge-base LI-profile-badge'
+          data-locale='en_US'
+          data-size='large'
+          data-theme='light'
+          data-type='HORIZONTAL'
+          data-vanity='abraham-aiyedogbon-9a7095282'
+          data-version='v1'></div>
       </section>
-      <div className='sm:w-[55%] sm:mx-auto flex flex-col justify-between mt-8'>
+
+      {/* Contact Section */}
+      <div className='sm:w-[80%] lg:w-[60%] mx-auto flex flex-col'>
         <section>
-          <h2
-            style={{ borderBottom: '1px solid #9ca3af' }}
-            className='text-gray-700 font-semibold text-lg mb-4'
-          >
+          <h2 className='text-gray-700 font-semibold text-lg mb-4 border-b border-gray-300'>
             Contact
           </h2>
-          <p className='mb-3'>
+          <p className='mb-4'>
             Hey! I post on{' '}
             <a
               href='https://twitter.com/joshuaAAbraham?s=20'
-              className='text-red-500'
-            >
+              className='text-blue-500 hover:underline'>
               Twitter
             </a>{' '}
             and{' '}
             <a
               href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
-              className='text-red-500'
-            >
+              className='text-blue-500 hover:underline'>
               LinkedIn
             </a>{' '}
-            often. Check out my amazing contents. If you want to get in touch,
-            feel free to consult with me.
+            often. Check out my amazing content. If you want to get in touch,
+            feel free to connect with me.
           </p>
         </section>
-        <div className=' contact mt-2'>
-          <h2
-            style={{ borderBottom: '1px solid #9ca3af' }}
-            className='text-gray-700 font-semibold text-lg mb-4'
-          >
+
+        {/* My Collections Section */}
+        <section className='mt-4'>
+          <h2 className='text-gray-700 font-semibold text-lg mb-4 border-b border-gray-300'>
             My Collections
           </h2>
           <p className='mb-3'>
             I write on{' '}
             <a
               href='https://hashnode.com/@AiyedogbonAbraham'
-              className='text-red-500'
-            >
-              hashnode
-            </a>
-            , you can follow and read my{' '}
+              className='text-blue-500 hover:underline'>
+              Hashnode
+            </a>{' '}
+            and you can follow my{' '}
             <a
               href='https://aiyedogbonabraham.hashnode.dev/'
-              className='text-red-500'
-            >
+              className='text-blue-500 hover:underline'>
               blogs
-            </a>
-            , connect with me on{' '}
+            </a>{' '}
+            and connect with me on{' '}
             <a
               href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
-              className='text-red-500'
-            >
+              className='text-blue-500 hover:underline'>
               LinkedIn
             </a>
-            .
-            <p>
-              I talk about{' '}
-              <span className='text-sm font-italic'>
-                #reactjs #javaScript #seo(good practices)
-              </span>
-            </p>
+            . I often talk about{' '}
+            <span className='text-sm italic'>#ReactJS #JavaScript #SEO</span>.
           </p>
-        </div>
+        </section>
 
-        <section className='mt-2'>
-          <h2
-            style={{ borderBottom: '1px solid #9ca3af' }}
-            className='text-gray-700 font-semibold text-lg mb-4'
-          >
+        {/* Skills Section */}
+        <section className='mt-4'>
+          <h2 className='text-gray-700 font-semibold text-lg mb-4 border-b border-gray-300'>
             Skills
           </h2>
-
-          <p>
-            I'm an architect of{' '}
+          <p className='mb-4'>
+            I’m an architect of{' '}
             <span className='font-bold'>user-friendly interfaces</span>, with a
             keen eye for detail and a commitment to{' '}
-            <span className='font-bold'>creating interfaces</span> that are both
-            efficient and effective.
+            <span className='font-bold'>
+              creating efficient and effective designs
+            </span>
+            .
           </p>
-          <p className='mt-1'>
-            Here are some of the <span className='font-bold'>tools</span> I have{' '}
-            <span className='font-bold'>worked</span> with over the years, for
-            my <span className='font-bold'>personal</span>,{' '}
-            <span className='font-bold'>professional</span> and{' '}
-            <span className='font-bold'>open source </span>
-            projects:
+          <p className='mb-6'>
+            Here are some of the <span className='font-bold'>tools</span> I’ve
+            worked with over the years for personal, professional, and
+            open-source projects:
           </p>
-          <div className='my-2 flex flex-row flex-wrap  justify-center gap-1 items-center px-2 lg:px-0 lg:w-[80%] w-full mx-auto '>
-            <div className='bg-white flex flex-row justify-evenly items-center w-[163px] h-[77px] mx-auto shadow-md rounded-lg'>
-              <img
-                src={html}
-                alt='html'
-                className=' h-14 w-14 lg:h-10 lg:w-10'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-              />
-              <p className='w-[60%] text-center'>HTML</p>
-            </div>
-            <div className='bg-white flex flex-row justify-evenly items-center w-[163px] h-[77px] mx-auto shadow-md'>
-              {' '}
-              <img
-                src={css}
-                alt='css'
-                className=' h-14 w-14 lg:h-10 lg:w-10'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-              />
-              <p className='w-[60%] text-center'>CSS</p>
-            </div>
-            <div className='bg-white flex flex-row justify-evenly items-center w-[163px] h-[77px] mx-auto shadow-md'>
-              {' '}
-              <img
-                src={javaScript}
-                alt='javaScript'
-                className=' h-14 w-14 lg:h-10 lg:w-10'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-              />
-              <p className='w-[60%] text-center'>javaScript</p>
-            </div>
-            <div className='bg-white flex flex-row justify-evenly items-center w-[163px] h-[77px] mx-auto shadow-md'>
-              {' '}
-              <img
-                src={tailwind}
-                alt='tailwind css'
-                className=' h-14 w-14 lg:h-10 lg:w-10'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-              />
-              <p className='w-[60%] text-center'>Tailwind CSS</p>
-            </div>
-            <div className='bg-white flex flex-row justify-evenly items-center w-[163px] h-[77px] mx-auto shadow-md'>
-              {' '}
-              <img
-                src={react}
-                alt='react'
-                className=' h-14 w-14 lg:h-10 lg:w-10'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-              />
-              <p className='w-[60%] text-center'>React.js</p>
-            </div>
-            <div className='bg-white flex flex-row justify-evenly items-center w-[163px] h-[77px] mx-auto  shadow-md'>
-              {' '}
-              <img
-                src={firebase}
-                alt='firebase'
-                className=' h-14 w-14 lg:h-10 lg:w-10'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-              />
-              <p className='w-[60%] text-center'>Firebase</p>
-            </div>
+          {/* Tools Section */}
+          <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+            <SkillCard img={html} name='HTML' />
+            <SkillCard img={css} name='CSS' />
+            <SkillCard img={javaScript} name='JavaScript' />
+            <SkillCard img={tailwind} name='Tailwind CSS' />
+            <SkillCard img={react} name='React.js' />
+            <SkillCard img={firebase} name='Firebase' />
           </div>
         </section>
       </div>
-      <div className='fixed left-10 top-[445px] sm:hidden md:hidden lg:block hidden flex flex-col'>
+
+      {/* Sidebar Links for Desktop */}
+      <div className='fixed left-10 top-[445px] hidden lg:block'>
         <Linked />
       </div>
-      <div className='fixed right-2 rotate-90 top-[470px]   sm:hidden md:hidden lg:block hidden flex flex-col'>
+
+      {/* Email Section for Desktop */}
+      <div className='fixed right-2 rotate-90 top-[470px] hidden lg:block'>
         <a href='mailto:aiyedogbonabraham@gmail.com'>
-          <p className='text-sm font-semibold h-[70px] w-[290px] text-center'>
-            {' '}
+          <p className='text-sm font-semibold text-center'>
             aiyedogbonabraham@gmail.com
           </p>
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+// SkillCard Component
+const SkillCard = ({ img, name }) => (
+  <div className='bg-white flex flex-col items-center p-4 shadow-md rounded-lg hover:shadow-lg transition'>
+    <img src={img} alt={name} className='h-16 w-16' />
+    <p className='text-center mt-2 font-semibold'>{name}</p>
+  </div>
+);
+
+export default About;
