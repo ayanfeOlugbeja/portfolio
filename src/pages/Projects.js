@@ -68,7 +68,7 @@ const Projects = () => {
           </div>
           <div className='p-6'>
             <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
-              PASSI (Electronic Exeat/Pass System)
+              PASSI (Exeat/Pass System)
             </h5>
             <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
               React.js | Redux | Tailwind | Node | Firebase

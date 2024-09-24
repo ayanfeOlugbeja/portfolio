@@ -54,7 +54,7 @@ const Linked = () => {
         </li>
         <li>
           <a
-            href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
+            href='https://linkedin.com/in/aiyedogbon'
             target='_blank'
             rel='noopener noreferrer'
             aria-label='LinkedIn'

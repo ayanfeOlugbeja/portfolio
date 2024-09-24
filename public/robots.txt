@@ -1,0 +1,6 @@
+# Allow all search engines to crawl your site
+User-agent: *
+Disallow:
+
+# Specify the location of your sitemap
+Sitemap: https://www.aiyedogbonabraham.pro/sitemap.xml

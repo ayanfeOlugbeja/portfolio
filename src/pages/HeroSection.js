@@ -7,8 +7,12 @@ import React, { useState } from 'react';
 
 const HeroSection = () => {
   const [showMore, setShowMore] = useState(false);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   const handleToggle = () => {
     setShowMore(!showMore);
+    scrollToTop();
   };
 
   return (
@@ -75,11 +79,11 @@ const HeroSection = () => {
                 </li>
               </ul>
               <p>
-                I'm <span className='text-blue-500'>excited</span> to learn more
-                about <span className='text-blue-500'>your company</span> and
-                how I can use <span className='text-blue-500'>my skills</span>{' '}
-                to help you <span className='text-blue-500'>achieve</span> your
-                <span className='text-blue-500'> goals</span>.
+                I'm <span className='font-semibold'>excited</span> to learn more
+                about <span className='font-semibold'>your company</span> and
+                how I can use <span className='font-semibold'>my skills</span>{' '}
+                to help you <span className='font-semibold'>achieve</span> your
+                <span className='font-semibold'> goals</span>.
               </p>
             </div>
           ) : (
@@ -93,7 +97,7 @@ const HeroSection = () => {
 
         {/* Resume Button */}
         <a
-          href='https://docs.google.com/document/d/1GjQEfE7ynZ82Pjl9miXdwVkr9kFj3_v8Hhoih1d46z0/edit?usp=sharing'
+          href='https://docs.google.com/document/d/1vjjUT7fc2KLVMcgYZqwl2RtEEoDPu_0FRQBVpHzwYMQ/edit?usp=sharing'
           className='my-4 mx-auto hidden sm:block'>
           <button className='lg:px-4 lg:py-3 px-3 py-2 rounded-lg bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition duration-300 ease-in-out'>
             RESUME
