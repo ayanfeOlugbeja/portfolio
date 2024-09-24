@@ -223,6 +223,12 @@ const Navbar = () => {
             }
             return null;
           })}
+
+          <a
+            href='https://docs.google.com/document/d/1vjjUT7fc2KLVMcgYZqwl2RtEEoDPu_0FRQBVpHzwYMQ/edit?usp=sharing'
+            className='border-b-2 border-transparent hover:border-blue-500 transition duration-300 lg:text-lg text-base'>
+            Resume
+          </a>
         </div>
 
         {/* Current Path */}
