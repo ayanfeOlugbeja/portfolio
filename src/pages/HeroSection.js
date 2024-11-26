@@ -93,7 +93,7 @@ const HeroSection = () => {
             `I'm passionate about technology and problem-solving. I've always wanted to build products that make a positive impact on the world. I'm excited to share my work with you, but there's so much more to tell.`
           )}
           <br />
-          <span onClick={handleToggle} className='cursor-pointer'>
+          <span onClick={handleToggle} className='cursor-pointer text-black'>
             {showMore ? 'less' : 'more'}
           </span>
         </p>

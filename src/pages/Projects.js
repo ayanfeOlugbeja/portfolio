@@ -5,6 +5,7 @@ import weatherApp from './../images/weatherApp.png';
 import blog from './../images/blog.png';
 import Passi from './../images/passi.jpg';
 import AimPro from './../images/aimprodriv.png';
+import autism from './../images/autism.png';
 
 const Projects = () => {
   return (
@@ -15,6 +16,14 @@ const Projects = () => {
 
       <div className='grid gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-6'>
         {[
+          {
+            title: 'Autism Awareness Africa',
+            description: 'React.js | Tailwind | Node | Firebase',
+            image: autism,
+            alt: 'Autism Awareness Africa website',
+            website: 'https://www.autismaawareness.africa',
+            repo: 'https://github.com/ayanfeOlugbeja',
+          },
           {
             title: 'Aim ProDrive Training Centre',
             description: 'React.js | Redux | Tailwind | Node | Firebase',
