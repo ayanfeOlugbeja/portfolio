@@ -8,181 +8,98 @@ import AimPro from './../images/aimprodriv.png';
 
 const Projects = () => {
   return (
-    <div className='projects min-h-screen py-12 bg-gray-100 dark:bg-gray-900'>
-      <h2 className='text-4xl font-extrabold text-gray-800 dark:text-white text-center mb-12 tracking-wide'>
+    <div className='projects min-h-screen py-12 '>
+      <h2 className='text-4xl font-extrabold text-black text-center mb-12 tracking-wide'>
         Featured Projects
       </h2>
 
-      <div className='grid gap-12 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-6'>
-        {/* Aim ProDrive Project */}
-        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
-          <div className='relative group'>
-            <img
-              className='rounded-t-lg w-full'
-              src={AimPro}
-              alt='Aim Prodrive Training Centre booking website'
-            />
-            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
+      <div className='grid gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-6'>
+        {[
+          {
+            title: 'Aim ProDrive Training Centre',
+            description: 'React.js | Redux | Tailwind | Node | Firebase',
+            image: AimPro,
+            alt: 'Aim Prodrive Training Centre booking website',
+            website: 'https://aim-prodrive.vercel.app',
+            repo: 'https://github.com/ayanfeOlugbeja/aim-pro',
+          },
+          {
+            title: 'PASSI (Exeat/Pass System)',
+            description: 'React.js | Redux | Tailwind | Node | Firebase',
+            image: Passi,
+            alt: 'Pass/Exeat application system',
+            website: 'https://gvuexeat.vercel.app',
+            repo: 'https://github.com/ayanfeOlugbeja/exeat-app',
+          },
+          {
+            title: 'Blog',
+            description: 'React.js | JSON Server',
+            image: blog,
+            alt: 'Blog project',
+            website: 'https://github.com/ayanfeOlugbeja/i-blog',
+            repo: 'https://github.com/ayanfeOlugbeja/i-blog',
+          },
+          {
+            title: 'Weather App',
+            description:
+              'JavaScript | Accuweather API | Bootstrap | localStorage',
+            image: weatherApp,
+            alt: 'Weather App',
+            website: 'https://github.com/ayanfeOlugbeja/weather-app',
+            repo: 'https://github.com/ayanfeOlugbeja/weather-app',
+          },
+          {
+            title: 'Portfolio',
+            description: 'React.js | Tailwind CSS',
+            image: portfolio,
+            alt: 'Portfolio project',
+            website: 'https://www.aiyedogbonabraham.pro',
+            repo: 'https://github.com/ayanfeOlugbeja/portfolio',
+          },
+        ].map((project, index) => (
+          <div
+            key={index}
+            className='bg-white shadow-lg rounded-lg overflow-hidden dark:bg-gray-800 dark:border-gray-700 transition-transform transform hover:scale-105'>
+            <div className='relative group'>
+              <img
+                className='w-full h-48 object-contain'
+                src={project.image}
+                alt={project.alt}
+              />
+              <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
+                <a
+                  href={project.website}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
+                  Visit Website
+                </a>
+              </div>
+            </div>
+            <div className='p-6'>
+              <h5 className='text-gray-900 font-bold text-xl mb-3 dark:text-white'>
+                {project.title}
+              </h5>
+              <p className='text-gray-700 dark:text-gray-400 mb-4 text-sm'>
+                {project.description}
+              </p>
               <a
-                href='https://aim-prodrive.vercel.app'
+                href={project.repo}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
-                Visit Website
+                className='inline-flex items-center'>
+                <img
+                  className='h-6 w-6 mr-2'
+                  src={github}
+                  alt='GitHub repository'
+                />
+                <span className='text-blue-600 hover:underline dark:text-blue-400'>
+                  View Code
+                </span>
               </a>
             </div>
           </div>
-          <div className='p-6'>
-            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
-              Aim ProDrive Training Centre
-            </h5>
-            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
-              React.js | Redux | Tailwind | Node | Firebase
-            </p>
-            <a
-              href='https://github.com/ayanfeOlugbeja/aim-pro'
-              target='_blank'
-              rel='noopener noreferrer'>
-              <img className='h-7 w-7' src={github} alt='GitHub repository' />
-            </a>
-          </div>
-        </div>
-
-        {/* PASSI Project */}
-        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
-          <div className='relative group'>
-            <img
-              className='rounded-t-lg w-full'
-              src={Passi}
-              alt='Pass/Exeat application system'
-            />
-            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
-              <a
-                href='https://gvuexeat.vercel.app'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
-                Visit Website
-              </a>
-            </div>
-          </div>
-          <div className='p-6'>
-            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
-              PASSI (Exeat/Pass System)
-            </h5>
-            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
-              React.js | Redux | Tailwind | Node | Firebase
-            </p>
-            <a
-              href='https://github.com/ayanfeOlugbeja/exeat-app'
-              target='_blank'
-              rel='noopener noreferrer'>
-              <img className='h-7 w-7' src={github} alt='GitHub repository' />
-            </a>
-          </div>
-        </div>
-
-        {/* Blog Project */}
-        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
-          <div className='relative group'>
-            <img
-              className='rounded-t-lg w-full'
-              src={blog}
-              alt='Blog project'
-            />
-            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
-              <a
-                href='https://github.com/ayanfeOlugbeja/i-blog'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
-                Visit Website
-              </a>
-            </div>
-          </div>
-          <div className='p-6'>
-            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
-              Blog
-            </h5>
-            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
-              React.js | JSON Server
-            </p>
-            <a
-              href='https://github.com/ayanfeOlugbeja/i-blog'
-              target='_blank'
-              rel='noopener noreferrer'>
-              <img className='h-7 w-7' src={github} alt='GitHub repository' />
-            </a>
-          </div>
-        </div>
-
-        {/* Weather App Project */}
-        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
-          <div className='relative group'>
-            <img
-              className='rounded-t-lg w-full'
-              src={weatherApp}
-              alt='Weather App'
-            />
-            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
-              <a
-                href='https://github.com/ayanfeOlugbeja/weather-app'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
-                Visit Website
-              </a>
-            </div>
-          </div>
-          <div className='p-6'>
-            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
-              Weather App
-            </h5>
-            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
-              JavaScript | Accuweather API | Bootstrap | localStorage
-            </p>
-            <a
-              href='https://github.com/ayanfeOlugbeja/weather-app'
-              target='_blank'
-              rel='noopener noreferrer'>
-              <img className='h-7 w-7' src={github} alt='GitHub repository' />
-            </a>
-          </div>
-        </div>
-
-        {/* Portfolio Project */}
-        <div className='relative bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300'>
-          <div className='relative group'>
-            <img
-              className='rounded-t-lg w-full'
-              src={portfolio}
-              alt='Portfolio project'
-            />
-            <div className='absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center'>
-              <a
-                href='https://www.aiyedogbonabraham.pro'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-white text-lg font-semibold py-2 px-6 border border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300'>
-                Visit Website
-              </a>
-            </div>
-          </div>
-          <div className='p-6'>
-            <h5 className='text-gray-900 font-bold text-3xl mb-3 dark:text-white tracking-tight'>
-              Portfolio
-            </h5>
-            <p className='font-medium text-base text-gray-700 dark:text-gray-400 mb-4 tracking-wide'>
-              React.js | Tailwind CSS
-            </p>
-            <a
-              href='https://github.com/ayanfeOlugbeja/portfolio'
-              target='_blank'
-              rel='noopener noreferrer'>
-              <img className='h-7 w-7' src={github} alt='GitHub repository' />
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className='flex justify-center items-center mt-12'>

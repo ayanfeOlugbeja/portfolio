@@ -247,9 +247,9 @@ const Navbar = () => {
         {isHomePage && (
           <div className='mt-4'>
             <p className='text-gray-700 hidden sm:block text-base'>
-              Welcome to my{' '}
+              {/* Welcome to my{' '} */}
               <span className='font-semibold' style={{ color: '#3b82f6' }}>
-                utopia
+                Introduction
               </span>
             </p>
           </div>
