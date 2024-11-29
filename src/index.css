@@ -1,21 +1,19 @@
-/* Tailwind base styles */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Universal Reset */
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Calibri, Arial, Helvetica, sans-serif; /* Fallback fonts added */
+  font-family: Calibri;
+
   color: #495c4f;
   scroll-behavior: smooth;
-  text-align: justify;
-  line-height: 1.5; /* Ensure consistent line height across browsers */
-}
 
-/* Scrollbar Styles */
+  /* border: 1px solid black; */
+  /* line-height: 1.5; */
+  box-sizing: border-box;
+  text-align: justify;
+}
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -25,45 +23,45 @@
 ::-webkit-scrollbar-thumb {
   background-color: #999;
   border-radius: 5px;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #ccc;
 }
 
-/* Body Background */
 body {
-  background: #ffffff; /* Ensure solid background for consistency */
+  /* background: linear-gradient(
+    90deg,
+    rgb(249, 251, 249) 0%,
+    rgb(253, 252, 252) 50%,
+    rgb(255, 255, 255) 100%
+  ); */
+  background: #ffffff;
 }
-
-/* Utility Classes */
 .social::after {
   content: '';
   position: absolute;
   width: 2px;
   height: 90px;
-  top: 50px;
-  left: 10px;
+  top: 50;
+  left: 10;
   background-color: blue;
 }
-
 .brand-list {
   list-style-type: disc;
 }
 
-/* Badge Styling */
 .badge-base {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Skill Card Hover Effect */
 .skill-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Text Sizing */
 .text-lg {
   font-size: 1.125rem; /* 18px */
   line-height: 1.75rem; /* 28px */
@@ -74,35 +72,4 @@ body {
     font-size: 1.25rem; /* 20px */
     line-height: 1.75rem; /* 28px */
   }
-}
-
-/* Reset Browser-Specific Issues */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  font-family: inherit;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Cross-Browser Focus States */
-input:focus,
-textarea:focus,
-button:focus {
-  outline: 2px solid #8badf4;
-  outline-offset: 2px;
 }
