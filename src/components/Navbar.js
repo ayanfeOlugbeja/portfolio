@@ -62,9 +62,7 @@ const Navbar = () => {
   return (
     <nav className='relative z-50'>
       {/* Mobile Navbar */}
-      <div
-        className='bg-transparent relative flex items-center h-16 sm:hidden px-4'
-        style={{ borderBottom: '1px solid #9ca3bf' }}>
+      <div className='bg-transparent relative flex items-center h-16 sm:hidden px-4'>
         {/* Hamburger Menu for Mobile */}
         {!isHomePage && (
           <div className='sm:hidden'>
@@ -199,7 +197,7 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div
         className='hidden sm:flex flex-col items-center'
-        style={{ height: '130px', borderBottom: '4px solid #3b82f6' }}>
+        style={{ height: '130px' }}>
         <div className='flex space-x-4 sm:tracking-3 text-xl mt-4 sm:mt-1 sm:ml-auto sm:mr-4 sm:space-x-5'>
           {/* Home Link */}
           {!isHomePage && (

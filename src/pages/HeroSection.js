@@ -1,9 +1,13 @@
+import React, { useState } from 'react';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { auto } from '@cloudinary/url-gen/actions/resize';
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
+import { AdvancedImage } from '@cloudinary/react';
 import Banner from './../components/Banner';
 import Footer from './../components/Footer';
 import { Link } from 'react-router-dom';
 import abraham from './../images/aiyedogbon-abraham.png';
 import log from './../images/logo.png';
-import React, { useState } from 'react';
 
 const HeroSection = () => {
   const [showMore, setShowMore] = useState(false);
@@ -16,6 +20,14 @@ const HeroSection = () => {
     setShowMore(!showMore);
     scrollToTop();
   };
+
+  const cld = new Cloudinary({ cloud: { cloudName: 'dgreljx82' } });
+
+  const img = cld
+    .image('aiyedogbon')
+    .format('auto') // Optimize delivery by resizing and applying auto-format and auto-quality
+    .quality('auto')
+    .resize(auto().gravity(autoGravity()).width(180).height(180)); // Transform the image: auto-crop to square
 
   return (
     <div className='hero-section sm:relative lg:mt-8 mt-10 text-gray-950'>
@@ -109,12 +121,8 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Section Card */}
-      <div className='min-w-[364px] w-1/4 right-16 top-60 hidden lg:flex flex-col items-center bg-white p-6 rounded-lg shadow-lg fixed'>
-        <img
-          src={abraham}
-          alt='Aiyedogbon Abraham'
-          className='w-24 h-24 object-cover rounded-full border-4 border-gray-300'
-        />
+      <div className='min-w-[264px] w-1/4 right-16 top-60 hidden lg:flex flex-col items-center bg-white p-6 rounded-lg shadow-lg fixed'>
+        <AdvancedImage cldImg={img} className='rounded-lg' />
         <h2 className='mt-4 text-lg font-semibold text-gray-800'>
           Aiyedogbon Abraham
         </h2>
@@ -168,7 +176,7 @@ const HeroSection = () => {
           </a>
         </div>
         <Link to='/contact'>
-          <button className='mt-6 px-6 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 transition'>
+          <button className='mt-6 px-6 py-2 bg-blue-700 text-white rounded-sm shadow-md transition font-bold'>
             Let’s Talk
           </button>
         </Link>
