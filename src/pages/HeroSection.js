@@ -29,11 +29,17 @@ const HeroSection = () => {
     .quality('auto')
     .resize(auto().gravity(autoGravity()).width(180).height(180)); // Transform the image: auto-crop to square
 
+  const logo = cld
+    .image('logo')
+    .format('auto') // Optimize delivery by resizing and applying auto-format and auto-quality
+    .quality('auto')
+    .resize(auto().gravity(autoGravity()).width(180).height(180)); // Transform the image: auto-crop to square
+
   return (
     <div className='hero-section sm:relative lg:mt-8 mt-10 text-gray-950'>
       {/* Logo Section */}
       <div className='logo w-1/5 h-1/4 sm:w-24 my-4 mx-4 top-4 sm:relative sm:top-24 sm:left-16'>
-        <img src={log} alt='Company logo' />
+        <AdvancedImage cldImg={logo} />
       </div>
 
       {/* Hero Text Section */}
