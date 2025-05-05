@@ -10,9 +10,7 @@ import autism from './../images/autism.png';
 const Projects = () => {
   return (
     <div className='projects min-h-screen py-12 '>
-      <h2 className='text-4xl font-extrabold text-black text-center mb-12 tracking-wide'>
-        Featured Projects
-      </h2>
+
 
       <div className='grid gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-6'>
         {[
