@@ -101,9 +101,9 @@ const Navbar = () => {
 
         {/* Brand Logo Link */}
         <div className='text-xl font-semibold ml-3 tracking-wide'>
-          <Link to='/' style={{ color: isHomePage ? '#ff3b30' : '#3b82f6' }}>
+          <h2 style={{ color: isHomePage ? '#ff3b30' : '#3b82f6' }}>
             {getNavText()}
-          </Link>
+          </h2>
         </div>
 
         {/* Resume Link */}
@@ -278,7 +278,7 @@ const Navbar = () => {
         {/* Main Logo */}
         <div className='my-3 font-bold text-3xl'>
           <h2 className='text-gray-700 flex justify-center items-center'>
-            <Link to='/'>AIYEDOGBON</Link>
+         <h2 className='text-transform: uppercase'> {getNavText()} </h2>
           </h2>
         </div>
       </div>
