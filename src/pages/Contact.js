@@ -20,12 +20,10 @@ const Contact = () => {
       {/* Main Contact Section */}
       <div className='contact-details mt-10 md:mt-16 mb-6 w-[80%] mx-auto md:w-[70%]'>
         {/* Heading for SEO */}
-        <h1 className='text-3xl font-bold text-gray-700 text-center mt-4 md:text-4xl'>
-          Contact Me
-        </h1>
+      
 
         {/* What's Next? */}
-        <h3 className='text-xl text-center hidden md:block mt-4 mb-4 text-blue-500'>
+        <h3 className='text-xl text-center hidden md:block mt-2 mb-2 text-blue-500'>
           What’s Next?
         </h3>
 
