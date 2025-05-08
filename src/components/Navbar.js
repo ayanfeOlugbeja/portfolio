@@ -5,21 +5,15 @@ const Navbar = () => {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   // Toggle Mobile Navigation
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen)
-    document.body.style.overflow = !isMobileNavOpen ? 'hidden' : 'auto'
+    if (!isMobileNavOpen) {
+      document.body.style.overflow = 'hidden' // Prevent background scroll when nav is open
+    } else {
+      document.body.style.overflow = 'auto' // Allow scroll when nav is closed
+    }
   }
 
   const mobileNavRef = useRef()
@@ -65,58 +59,54 @@ const Navbar = () => {
     { path: '/projects', name: 'Projects' },
   ]
 
+  // Determine the text based on the current route
+  const getNavText = () => {
+    if (location.pathname === '/about') return 'About'
+    if (location.pathname === '/contact') return 'Contact'
+    if (location.pathname === '/projects') return 'Projects'
+    return 'Aiyedogbon' // Default text
+  }
+
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-sm' : 'bg-transparent'
-      }`}
-    >
+    <nav className='relative z-50'>
       {/* Mobile Navbar */}
-      <div className='relative flex items-center h-16 sm:hidden px-4'>
+      <div className='bg-transparent relative flex items-center h-16 sm:hidden px-4'>
         {/* Hamburger Menu for Mobile */}
         {!isHomePage && (
-          <button
-            className='p-2 hamburger-menu focus:outline-none'
-            onClick={toggleMobileNav}
-            aria-label='Toggle navigation menu'
-          >
-            <svg
-              className={`w-6 h-6 transition-transform duration-300 ease-in-out transform ${
-                isMobileNavOpen ? 'rotate-45' : 'rotate-0'
-              }`}
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              strokeWidth='2'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            >
-              {isMobileNavOpen ? (
-                <path d='M6 18L18 6M6 6l12 12'></path>
-              ) : (
-                <path d='M4 6h16M4 12h16M4 18h16'></path>
-              )}
-            </svg>
-          </button>
+          <div className='sm:hidden'>
+            <button className='p-2 hamburger-menu' onClick={toggleMobileNav}>
+              <svg
+                className={`w-8 h-8 transition-transform duration-300 ease-in-out transform ${
+                  isMobileNavOpen ? 'rotate-45' : 'rotate-0'
+                }`}
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              >
+                {isMobileNavOpen ? (
+                  <path d='M6 18L18 6M6 6l12 12'></path>
+                ) : (
+                  <path d='M4 6h16M4 12h16M4 18h16'></path>
+                )}
+              </svg>
+            </button>
+          </div>
         )}
 
         {/* Brand Logo Link */}
-        <div className='text-xl font-medium ml-3 tracking-tight'>
-          <h2 className={scrolled ? 'text-black' : 'text-white'}>
-            {location.pathname === '/'
-              ? 'Aiyedogbon'
-              : location.pathname.slice(1)}
+        <div className='text-xl font-semibold ml-3 tracking-wide'>
+          <h2 style={{ color: isHomePage ? '#ff3b30' : '#3b82f6' }}>
+            {getNavText()}
           </h2>
         </div>
 
         {/* Resume Link */}
         <a
           href='https://docs.google.com/document/d/1vjjUT7fc2KLVMcgYZqwl2RtEEoDPu_0FRQBVpHzwYMQ/edit?usp=sharing'
-          className={`ml-auto transition-colors duration-300 ${
-            scrolled
-              ? 'text-black hover:text-gray-600'
-              : 'text-white hover:text-gray-200'
-          }`}
+          className='ml-auto text-gray-700 hover:text-blue-500 transition-colors duration-300'
         >
           Resume
         </a>
@@ -124,67 +114,76 @@ const Navbar = () => {
         {/* Mobile Nav Menu */}
         {isMobileNavOpen && !isHomePage && (
           <>
-            <div className='fixed inset-0 bg-black/50 backdrop-blur-sm z-40 sm:hidden'></div>
+            <div className='fixed inset-0 bg-black opacity-50 z-40 sm:hidden'></div>
+
             <div
-              className={`fixed top-0 left-0 w-[280px] h-screen bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+              className={`absolute top-16 left-0 right-0 bottom-0 w-[70%] h-screen overflow-y-auto bg-gradient-to-b from-blue-500 to-blue-900 z-50 shadow-md transform transition-transform duration-500 ease-in-out ${
                 isMobileNavOpen ? 'translate-x-0' : '-translate-x-full'
               } mobile-nav-content`}
               ref={mobileNavRef}
             >
-              <div className='p-6'>
-                <ul className='space-y-6'>
-                  <li>
+              {/* Introduction/Tagline */}
+              <div className='px-6 pt-6 text-white text-lg font-medium'>
+                {/* <p>Aiyedogbon Abraham</p> */}
+              </div>
+
+              <ul className='px-6 pt-4 space-y-8'>
+                <li className='text-lg'>
+                  <Link
+                    to='/'
+                    className='text-white hover:text-gray-300 transition-colors duration-300 font-semibold tracking-wider'
+                    onClick={() => {
+                      setIsMobileNavOpen(false)
+                      document.body.style.overflow = 'auto'
+                    }}
+                  >
+                    Home{' '}
+                    {location.pathname === '/' && (
+                      <span className='absolute right-4'>▪</span>
+                    )}
+                  </Link>
+                </li>
+                {navLinks.map((link) => (
+                  <li key={link.path} className='text-lg'>
                     <Link
-                      to='/'
-                      className='block text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors duration-200'
+                      to={link.path}
+                      className='text-white hover:text-gray-300 transition-colors duration-300 font-semibold tracking-wider'
                       onClick={() => {
                         setIsMobileNavOpen(false)
                         document.body.style.overflow = 'auto'
                       }}
                     >
-                      Home
+                      {link.name}
+                      {location.pathname === link.path && (
+                        <span className='absolute right-4'>▪</span>
+                      )}
                     </Link>
                   </li>
-                  {navLinks.map((link) => (
-                    <li key={link.path}>
-                      <Link
-                        to={link.path}
-                        className={`block text-lg font-medium transition-colors duration-200 ${
-                          location.pathname === link.path
-                            ? 'text-blue-600'
-                            : 'text-gray-900 hover:text-blue-600'
-                        }`}
-                        onClick={() => {
-                          setIsMobileNavOpen(false)
-                          document.body.style.overflow = 'auto'
-                        }}
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                ))}
+              </ul>
 
-                {/* CTA Button */}
-                <div className='mt-8'>
-                  <a
-                    href='mailto:aiyedogbonabraham@gmail.com'
-                    className='block w-full text-center py-3 px-6 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200'
-                  >
-                    Get In Touch
-                  </a>
-                </div>
+              {/* CTA Button */}
+              <div className='mt-8 px-6'>
+                <a
+                  href='mailto:aiyedogbonabraham@gmail.com'
+                  className='block text-center py-3 px-6 bg-white text-blue-600 font-semibold rounded-md shadow hover:bg-gray-100 transition-colors duration-300'
+                >
+                  Get In Touch
+                </a>
+              </div>
 
-                {/* Social Media Links */}
-                <div className='mt-8 flex space-x-4'>
+              {/* Social Media Links */}
+              <div className='absolute top-96 px-6'>
+                <div className='flex space-x-4 text-white'>
                   <a
                     href='https://www.linkedin.com/in/aiyedogbon'
-                    className='text-gray-600 hover:text-blue-600 transition-colors duration-200'
+                    className='hover:text-gray-300 transition-colors duration-300'
                     target='_blank'
                     rel='noopener noreferrer'
                   >
                     <svg
-                      className='w-6 h-6'
+                      className='w-6 h-6 bg-white'
+                      xmlns='http://www.w3.org/2000/svg'
                       fill='currentColor'
                       viewBox='0 0 24 24'
                     >
@@ -193,12 +192,13 @@ const Navbar = () => {
                   </a>
                   <a
                     href='https://twitter.com/joshuaAAbraham?s=20'
-                    className='text-gray-600 hover:text-blue-600 transition-colors duration-200'
+                    className='hover:text-gray-300 transition-colors duration-300'
                     target='_blank'
                     rel='noopener noreferrer'
                   >
                     <svg
-                      className='w-6 h-6'
+                      className='w-6 h-6 text-gray-700 hover:text-blue-600 transition-colors duration-300 bg-white'
+                      xmlns='http://www.w3.org/2000/svg'
                       fill='currentColor'
                       viewBox='0 0 24 24'
                     >
@@ -213,36 +213,73 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navbar */}
-      <div className='hidden sm:block'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex justify-between items-center h-16'>
-            <div className='flex-shrink-0'>
-              <Link to='/' className='text-xl font-medium tracking-tight'>
-                Aiyedogbon
-              </Link>
-            </div>
-            <div className='hidden sm:flex sm:space-x-8'>
-              {navLinks.map((link) => (
+      <div
+        className='hidden sm:flex flex-col items-center'
+        style={{ height: '130px' }}
+      >
+        <div className='flex space-x-4 sm:tracking-3 text-xl mt-4 sm:mt-1 sm:ml-auto sm:mr-4 sm:space-x-5'>
+          {/* Home Link */}
+          {!isHomePage && (
+            <Link
+              to='/'
+              className='border-b-2 border-transparent hover:border-blue-500 transition duration-300 lg:text-lg text-base'
+            >
+              Home
+            </Link>
+          )}
+          {/* Other Navigation Links */}
+          {navLinks.map((link) => {
+            if (link.path !== location.pathname) {
+              return (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-base font-medium transition-colors duration-200 ${
-                    location.pathname === link.path
-                      ? 'text-blue-600'
-                      : 'text-gray-900 hover:text-blue-600'
-                  }`}
+                  className='border-b-2 border-transparent hover:border-blue-500 transition duration-300 lg:text-lg text-base text-gray-700'
                 >
                   {link.name}
                 </Link>
-              ))}
-              <a
-                href='https://docs.google.com/document/d/1vjjUT7fc2KLVMcgYZqwl2RtEEoDPu_0FRQBVpHzwYMQ/edit?usp=sharing'
-                className='text-base font-medium text-gray-900 hover:text-blue-600 transition-colors duration-200'
-              >
-                Resume
-              </a>
-            </div>
+              )
+            }
+            return null
+          })}
+
+          <a
+            href='https://docs.google.com/document/d/1vjjUT7fc2KLVMcgYZqwl2RtEEoDPu_0FRQBVpHzwYMQ/edit?usp=sharing'
+            className='border-b-2 border-transparent hover:border-blue-500 transition duration-300 lg:text-lg text-base'
+          >
+            Resume
+          </a>
+        </div>
+
+        {/* Current Path */}
+        {!isHomePage && (
+          <div className='mt-4 mb-0 hidden sm:block'>
+            <p className='text-gray-700 text-base'>
+              <Link to='/' className='font-semibold'>
+                aiyedogbonabraham.pro
+              </Link>{' '}
+              ➡ {location.pathname.substring(1)}
+            </p>
           </div>
+        )}
+
+        {/* Home Page Welcome Text */}
+        {isHomePage && (
+          <div className='mt-4'>
+            <p className='text-gray-700 hidden sm:block text-base'>
+              {/* Welcome to my{' '} */}
+              <span className='font-semibold' style={{ color: '#3b82f6' }}>
+                Introduction
+              </span>
+            </p>
+          </div>
+        )}
+
+        {/* Main Logo */}
+        <div className='my-3 font-bold text-3xl'>
+          <h2 className='text-gray-700 flex justify-center items-center'>
+            <h2 className='text-transform: uppercase'> {getNavText()} </h2>
+          </h2>
         </div>
       </div>
     </nav>

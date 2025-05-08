@@ -2,81 +2,67 @@ import Linked from './../components/Linked'
 
 const Contact = () => {
   return (
-    <div className='min-h-screen bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-          {/* Main Content */}
-          <div className='lg:col-span-8 lg:col-start-3'>
-            <div className='text-center max-w-2xl mx-auto'>
-              {/* What's Next? */}
-              <h3 className='text-lg font-medium text-blue-600 mb-4'>
-                What's Next?
-              </h3>
+    <div>
+      {/* Social Links Sidebar */}
+      <div className='absolute left-2 top-[400px] hidden lg:block'>
+        <Linked />
+      </div>
 
-              {/* Get In Touch Section */}
-              <h2 className='text-4xl font-bold text-gray-900 mb-6'>
-                Get In Touch
-              </h2>
-              <p className='text-lg text-gray-600 mb-12'>
-                I'm currently looking for new opportunities. My inbox is always
-                open! Whether you have a question, want to collaborate, or just
-                want to say hi, I'll get back to you as soon as possible.
-              </p>
+      {/* Email Sidebar */}
+      <div className='absolute right-2 rotate-90 top-[430px] hidden lg:block'>
+        <a href='mailto:aiyedogbonabraham@gmail.com'>
+          <p className='text-sm font-semibold h-[70px] w-[290px] text-center'>
+            aiyedogbonabraham@gmail.com
+          </p>
+        </a>
+      </div>
 
-              {/* Call To Action */}
-              <div className='flex justify-center'>
-                <a
-                  href='mailto:aiyedogbonabraham@gmail.com'
-                  className='inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition-colors duration-200'
-                >
-                  Say Hello
-                </a>
-              </div>
-            </div>
+      {/* Main Contact Section */}
+      <div className='contact-details mt-10 md:mt-16 mb-6 w-[80%] mx-auto md:w-[70%]'>
+        {/* Heading for SEO */}
 
-            {/* Mobile Linked Component */}
-            <div className='mt-16 lg:hidden'>
-              <Linked />
-            </div>
-          </div>
+        {/* What's Next? */}
+        <h3 className='text-xl text-center hidden md:block mt-2 mb-2 text-blue-500'>
+          What’s Next?
+        </h3>
 
-          {/* Sidebar */}
-          <div className='lg:col-span-2'>
-            <div className='lg:sticky lg:top-8'>
-              {/* Social Links Sidebar */}
-              <div className='hidden lg:block mb-8'>
-                <Linked />
-              </div>
+        {/* Get In Touch Section */}
+        <h2 className='text-2xl font-bold text-center text-gray-700 mb-4 md:text-3xl'>
+          Get In Touch
+        </h2>
+        <p className='text-lg text-center md:text-xl font-normal px-4 lg:w-[500px] mx-auto'>
+          I’m currently looking for new opportunities. My inbox is always open!
+          Whether you have a question, want to collaborate, or just want to say
+          hi, I’ll get back to you as soon as possible.
+        </p>
 
-              {/* Email Sidebar */}
-              <div className='hidden lg:block'>
-                <a
-                  href='mailto:aiyedogbonabraham@gmail.com'
-                  className='text-gray-600 hover:text-blue-600 transition-colors duration-200'
-                >
-                  <p className='text-sm font-medium'>
-                    aiyedogbonabraham@gmail.com
-                  </p>
-                </a>
-              </div>
-            </div>
-          </div>
+        {/* Call To Action */}
+        <div className='flex justify-center mt-10'>
+          <a
+            href='mailto:aiyedogbonabraham@gmail.com'
+            className='px-6 py-4 border border-blue-500 text-blue-500 rounded-lg text-lg hover:bg-blue-500 hover:text-white transition duration-300'
+          >
+            Say Hello
+          </a>
         </div>
+
+        {/* Mobile Linked Component */}
+        <section className='w-[80%] mx-auto mt-16 sm:block lg:hidden'>
+          <Linked />
+        </section>
       </div>
 
       {/* Footer */}
-      <footer className='border-t border-gray-100 py-8'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <p className='text-center text-sm text-gray-600'>
-            Designed & Built by{' '}
-            <a
-              href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
-              className='text-blue-600 hover:text-blue-700 transition-colors duration-200'
-            >
-              Aiyedogbon Abraham
-            </a>
-          </p>
-        </div>
+      <footer className='text-center text-sm mt-10 mb-6 lg:absolute lg:bottom-0 lg:left-10 lg:right-10'>
+        <p className='hover:text-red-500'>
+          Designed & Built by{' '}
+          <a
+            href='https://linkedin.com/in/abraham-aiyedogbon-9a7095282'
+            className='text-blue-500 hover:underline'
+          >
+            Aiyedogbon Abraham
+          </a>
+        </p>
       </footer>
     </div>
   )

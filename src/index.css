@@ -2,168 +2,44 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-:root {
-  --primary-color: #000000;
-  --secondary-color: #666666;
-  --accent-color: #0066FF;
-  --background-color: #FFFFFF;
-  --spacing-unit: 8px;
-}
-
 * {
   margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: var(--primary-color);
+  font-family: Calibri;
+
+  color: #495c4f;
   scroll-behavior: smooth;
+
+  /* border: 1px solid black; */
+  /* line-height: 1.5; */
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: justify;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #8badf4;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 5px;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc;
 }
 
 body {
-  background: var(--background-color);
-  line-height: 1.6;
-  letter-spacing: -0.011em;
+  /* background: linear-gradient(
+    90deg,
+    rgb(249, 251, 249) 0%,
+    rgb(253, 252, 252) 50%,
+    rgb(255, 255, 255) 100%
+  ); */
+  background: #ffffff;
 }
-
-/* Typography Scale */
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.015em;
-}
-
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-p {
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  line-height: 1.6;
-  max-width: 65ch;
-}
-
-/* Grid System */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 calc(var(--spacing-unit) * 2);
-}
-
-.grid {
-  display: grid;
-  gap: calc(var(--spacing-unit) * 3);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-/* Smooth Scrolling */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--background-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-color);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--primary-color);
-}
-
-/* Responsive Spacing */
-.section {
-  padding: calc(var(--spacing-unit) * 8) 0;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: calc(var(--spacing-unit) * 4) 0;
-  }
-}
-
-/* Card Styles */
-.card {
-  background: var(--background-color);
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Utility Classes */
-.text-accent {
-  color: var(--accent-color);
-}
-
-.text-secondary {
-  color: var(--secondary-color);
-}
-
-.uppercase {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-}
-
 .social::after {
   content: '';
   position: absolute;
-  width: 2px;
-  height: 90px;
-  top: 50;
-  left: 10;
-  background-color: blue;
-}
-.brand-list {
-  list-style-type: disc;
-}
-
-.badge-base {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.text-lg {
-  font-size: 1.125rem; /* 18px */
-  line-height: 1.75rem; /* 28px */
-}
-
-@media (min-width: 768px) {
-  .text-lg {
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
-  }
 }
